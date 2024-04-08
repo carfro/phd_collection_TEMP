@@ -1,0 +1,56 @@
+&control
+    calculation = 'vc-relax'
+    restart_mode = 'from_scratch'
+	pseudo_dir = '<path-to-ONCV-SG15-PBE-Pseudopotentials>'
+    tprnfor = .true.
+    outdir = './'
+    prefix = 'PVDF_relax'
+    wf_collect = .false.
+    forc_conv_thr = 1d-8
+    tstress = .true.
+    verbosity = 'high'
+/
+
+&system
+    ibrav=0, A = 8.4019, nat=12, ntyp=3, ecutwfc=160.0, nbnd=32, input_dft='vdw-df-cx'
+    occupations = 'smearing'
+    degauss = 0.0002
+    smearing = 'gaussian'
+/
+
+&electrons
+    conv_thr = 1.0d-8
+/
+ &ions
+ ion_dynamics = 'bfgs'
+ /
+ &cell
+ cell_dynamics = 'bfgs'
+ /
+
+CELL_PARAMETERS
+   1.039955439   0.000000000   0.000000000
+   0.000000000   0.525366038   0.000000000
+   0.000000000   0.000000000   0.304625331
+
+ATOMIC_SPECIES
+C 12.0 C_ONCV_PBE-1.0.upf
+F 14.0 F_ONCV_PBE-1.0.upf
+H 1.0  H_ONCV_PBE-1.0.upf
+
+ATOMIC_POSITIONS crystal
+C             0.2500000000        0.5620618596 0.0000000000
+C             0.7500000000        0.0620033563 0.0000000000
+C             0.2500000000        0.3750754315 0.5000000000
+C             0.7500000000        0.8750147708 0.5000000000
+F             0.3756083621        0.7556235063 0.0000000000
+F             1.1243916379        0.7556235063 0.0000000000
+F             0.8756079301        1.2555667071 0.0000000000
+F             0.6243920699        1.2555667071 0.0000000000
+H             0.3508962094        0.2258967945 0.5000000000
+H             1.1491037906        0.2258967945 0.5000000000
+H             0.6491039929        0.7258352821 0.5000000000
+H             0.8508960071        0.7258352821 0.5000000000
+
+K_POINTS automatic
+2 2 8 0 0 0 

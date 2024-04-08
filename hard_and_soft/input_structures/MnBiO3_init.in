@@ -1,0 +1,70 @@
+&control
+    calculation = 'vc-relax'
+    restart_mode = 'from_scratch'
+	pseudo_dir = '<path-to-ONCV-SG15-PBE-Pseudopotentials>'
+    tprnfor = .true.
+    outdir = './'
+    wf_collect = .false.
+    tstress = .true.
+    forc_conv_thr = 1d-8
+    verbosity = 'high'
+/
+
+&system
+    ibrav=0, nat=20, ntyp=3, ecutwfc=160.0, nbnd=120, input_dft='vdw-df-cx'
+    occupations = 'smearing'
+    degauss = 0.002
+    smearing = 'gaussian'
+    nspin=2
+    starting_magnetization(1) = 1
+/
+
+&electrons
+    electron_maxstep = 800
+    diagonalization = 'david'
+    mixing_beta = 0.35d0
+    conv_thr = 1.0d-8
+/
+
+&ions
+ ion_dynamics = 'bfgs'
+ /
+&cell
+ cell_dynamics = 'bfgs'
+ /
+
+
+CELL_PARAMETERS {'angstrom'}
+	 5.6292338371        0.0000000000         0.0000000000
+	-2.7431849286        4.9156088169         0.0000000000
+	-3.0688567903        1.8017851135         9.3451422147
+
+ATOMIC_SPECIES
+Mn 54.94  Mn_ONCV_PBE-1.0.upf
+Bi 209.98 Bi_ONCV_PBE-1.0.upf
+O  16.00  O_ONCV_PBE-1.0.upf
+
+ATOMIC_POSITIONS crystal
+Mn     0.786803033         0.786803052         0.250000004
+Mn     0.213197005         0.213196979         0.750000012
+Mn    -0.000000007         0.500000007         0.000000000
+Mn     0.500000009        -0.000000003         0.500000008
+Bi     0.919921939         0.645618985         0.623572990
+Bi     0.645619019         0.919922021         0.876427034
+Bi     0.080078002         0.354381008         0.376427000
+Bi     0.354380975         0.080077993         0.123572995
+O      0.920839001         0.730108980         0.078806997
+O      0.730108996         0.920839020         0.421193011
+O      0.079161035         0.269891003         0.921193019
+O      0.269890999         0.079161012         0.578807005
+O      0.578959981         0.286770999         0.872297978
+O      0.286770967         0.578959981         0.627701995
+O      0.421040000         0.713228998         0.127702000
+O      0.713228962         0.421040002         0.372298021
+O      0.807255037         0.105261009         0.665666993
+O      0.105261000         0.807255052         0.834333031
+O      0.192744954         0.894738910         0.334332998
+O      0.894738991         0.192744999         0.165666998
+
+K_POINTS automatic
+10 10 6 0 0 0

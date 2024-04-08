@@ -1,0 +1,37 @@
+data_image0
+_chemical_formula_structural       C4F2H6
+_chemical_formula_sum              "C4 F2 H6"
+_cell_length_a       8.58
+_cell_length_b       4.91
+_cell_length_c       2.55286
+_cell_angle_alpha    90
+_cell_angle_beta     90
+_cell_angle_gamma    90
+
+_space_group_name_H-M_alt    "P 1"
+_space_group_IT_number       1
+
+loop_
+  _space_group_symop_operation_xyz
+  'x, y, z'
+
+loop_
+  _atom_site_type_symbol
+  _atom_site_label
+  _atom_site_symmetry_multiplicity
+  _atom_site_fract_x
+  _atom_site_fract_y
+  _atom_site_fract_z
+  _atom_site_occupancy
+  C   C1        1.0  0.02926  0.06599  0.25116  1.0000
+  C   C2        1.0  0.95722  0.93732  0.75716  1.0000
+  C   C3        1.0  0.46773  0.56232  0.74131  1.0000
+  C   C4        1.0  0.54088  0.43558  0.23523  1.0000
+  F   F1        1.0  0.20117  0.02317  0.24598  1.0000
+  F   F2        1.0  0.29472  0.54648  0.77916  1.0000
+  H   H1        1.0  0.00441  0.28369  0.25553  1.0000
+  H   H2        1.0  0.83142  0.96810  0.76155  1.0000
+  H   H3        1.0  0.98239  0.71974  0.75217  1.0000
+  H   H4        1.0  0.50287  0.77507  0.71152  1.0000
+  H   H5        1.0  0.66756  0.44529  0.20546  1.0000
+  H   H6        1.0  0.50487  0.22361  0.26709  1.0000

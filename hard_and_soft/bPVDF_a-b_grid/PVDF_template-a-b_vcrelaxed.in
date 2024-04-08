@@ -1,0 +1,47 @@
+&control
+    calculation = 'relax'
+    restart_mode = 'from_scratch'
+    tprnfor = .true.
+    outdir = './'
+    pseudo_dir = '<path-to-ONCV-SG15-PBE-Pseudopotentials>'
+    prefix = 'relax'
+    wf_collect = .false.
+    forc_conv_thr = 1d-8
+    tstress = .true.
+    verbosity = 'high'
+/
+
+&system
+    ibrav=0, nat=12, ntyp=3, ecutwfc=160.0, nbnd=32, input_dft='FUNC'
+    occupations = 'smearing'
+    degauss = 0.0002
+    smearing = 'gaussian'
+/
+
+&electrons
+    electron_maxstep = 800
+    diagonalization = 'david'
+    mixing_beta = 0.35d0
+    conv_thr = 1.0d-8
+/
+ &ions
+ ion_dynamics = 'bfgs'
+ /
+ &cell
+ cell_dynamics = 'bfgs'
+ /
+
+CELL_PARAMETERS { 'angstrom' }
+   A_VALUE 
+   B_VALUE 
+   0.000000000   0.000000000   2.574796400
+
+ATOMIC_SPECIES
+C 12.0 C_ONCV_PBE-1.0.upf
+F 14.0 F_ONCV_PBE-1.0.upf
+H 1.0  H_ONCV_PBE-1.0.upf
+
+ATOMIC_POSITIONS_PLACEHOLDER
+
+K_POINTS automatic
+2 2 8 0 0 0 
