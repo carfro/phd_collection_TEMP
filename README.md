@@ -19,7 +19,7 @@ This project relied on ASE for structure manipulation and generation of input fi
 - ```shifted_12.db``` ASE database file contains the shifted versions of the above structures.
 
 #### The subdirectories of ```hard_and_soft``` contains the following:
-This project instead modifies QE template files to generate input files for the calculations.
+This project used QE template files to generate input files for the calculations.
 
 - `bPVDF_a-b_grid/` Template input file and script to generate the energy vs strain along a-b for $\beta$-PVDF.
 
