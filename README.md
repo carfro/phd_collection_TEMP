@@ -2,7 +2,7 @@
 
 **This is a temporary repository to showcase some of the Python scripts that I've written for my PhD work.**
 **They will be published in separate repos with more complete documentation on GitLab soon,**
-**but I wanted to make them available for a potential employer to see.**
+**but I wanted to make them available for a potential employer to see now.**
 
 The repository contains a collection of scripts (and input files for completeness) used to run DFT 
 calculations with Quantum ESPRESSO (QE) on HPC clusters using the SLURM job scheduler.
